@@ -12,7 +12,8 @@ Input projection|.
 
 Output relations|.
 ---|---
-`sum`          | numeric, sum value returned per cell
+`rowMean`          | numeric, mean of the row
+`rowRank`          | numeric, rank of the row
 
 ##### Details
 
