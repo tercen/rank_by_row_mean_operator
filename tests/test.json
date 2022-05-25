@@ -3,7 +3,7 @@
   "name": "test",
   "namespace": "ds0",
   "inputDataUri": "c03_simple.tsv",
-  "outputDataUri": ["table1.csv","table2.csv","table3.csv"],
+  "outputDataUri": ["table1.csv","table2.csv"],
   "columns": ["Observation"],
   "rows": ["Variable"],
   "colors": [],
