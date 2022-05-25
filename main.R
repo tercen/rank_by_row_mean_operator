@@ -1,20 +1,19 @@
+library(tercenApi)
 library(tercen)
-library(dplyr)
+library(data.table)
+library(dtplyr)
+library(dplyr, warn.conflicts = FALSE)
 
 ctx = tercenCtx()
 
-data   <- ctx %>% select(.ri, .ci, .y)
-matrix <- ctx$as.matrix()
+data = ctx %>% select(.y, .ci, .ri) %>% lazy_dt();
 
-row_means <- rowMeans(matrix)
-row_rank  <- rank(row_means, ties.method = "min")
-row_rank  <- 1 + max(row_rank) - row_rank
-result    <- data.frame(.ri = data$.ri, .ci = data$.ci, rowMean = NaN, rowRank = NaN)
-for (i in 0:length(row_means)) {
-  result$rowMean[result$.ri == i] = row_means[i+1]
-  result$rowRank[result$.ri == i] = row_rank[i+1]
-}
-
-result %>%
+data %>%
+  group_by(.ri) %>%
+  summarise(rowMean = mean(.y)) %>%
+  mutate(rowRank=rank(rowMean, ties.method = "min")) %>%
+  right_join(data %>% select(-.y), by = ".ri") %>%
+  as_tibble() %>%
   ctx$addNamespace() %>%
   ctx$save()
+ 

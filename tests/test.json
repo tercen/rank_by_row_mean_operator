@@ -2,7 +2,7 @@
   "kind": "OperatorUnitTest",
   "name": "test",
   "namespace": "ds0",
-  "inputDataUri": "simple_exp.tsv",
+  "inputDataUri": "c03_simple.tsv",
   "outputDataUri": ["table1.csv","table2.csv","table3.csv"],
   "columns": ["Observation"],
   "rows": ["Variable"],
