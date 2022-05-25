@@ -10,7 +10,7 @@ ctx %>% select(.y, .ri) %>%
   lazy_dt() %>%
   group_by(.ri) %>%
   summarise(rowMean = mean(.y)) %>%
-  mutate(rowRank=rank(rowMean, ties.method = "min")) %>%
+  mutate(rowRank=as.double(rank(rowMean, ties.method = "min"))) %>%
   as_tibble() %>%
   ctx$addNamespace() %>%
   ctx$save()
