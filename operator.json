@@ -1,10 +1,14 @@
 {
   "name": "Rank by Row mean",
   "description": "Ranks the incoming data by row mean.",
-  "tags": ["rank", "pamgene"],
-  "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/rank_by_row_mean_operator"],
+  "tags": [
+    "preprocessing"
+  ],
+  "authors": [
+    "tercen"
+  ],
+  "urls": [
+    "https://github.com/tercen/rank_by_row_mean_operator"
+  ],
   "properties": []
 }
-
-
