@@ -1,6 +1,6 @@
 {
-  "name": "Rank by Row mean",
-  "description": "Ranks the incoming data by row mean.",
+  "name": "Rank by Row Means",
+  "description": "Ranks the incoming data by row means.",
   "tags": [
     "preprocessing"
   ],
