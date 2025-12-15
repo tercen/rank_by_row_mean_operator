@@ -18,7 +18,18 @@
     "inputSpecs": [
       {
         "kind": "CrosstabSpec",
-        "metaFactors": [],
+        "metaFactors": [
+          {
+            "kind": "MetaFactor",
+            "name": "Row",
+            "type": "",
+            "description": "Row factor(s) to compute means and ranks for",
+            "ontologyMapping": "row",
+            "crosstabMapping": "row",
+            "cardinality": "1..n",
+            "factors": []
+          }
+        ],
         "axis": [
           {
             "kind": "AxisSpec",
