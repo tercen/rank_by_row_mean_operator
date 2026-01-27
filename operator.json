@@ -48,6 +48,41 @@
           }
         ]
       }
+    ],
+    "outputSpecsV2": [
+      {
+        "kind": "OperatorJoinSpec",
+        "joinOperators": [
+          {
+            "kind": "JoinOperator",
+            "joinType": "left",
+            "leftPair": {
+              "kind": "ColumnPair",
+              "lColumns": [
+                "Row"
+              ],
+              "rColumns": [
+                "Row"
+              ]
+            },
+            "rightRelation": {
+              "kind": "TableRelation",
+              "attributes": [
+                {
+                  "kind": "Attribute",
+                  "name": "rowMean",
+                  "type": "double"
+                },
+                {
+                  "kind": "Attribute",
+                  "name": "rowRank",
+                  "type": "double"
+                }
+              ]
+            }
+          }
+        ]
+      }
     ]
   }
 }
